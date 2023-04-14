@@ -66,6 +66,7 @@ class AnimatedMapController extends MapControllerImpl {
     double? zoom,
     double? rotation,
     Curve? curve,
+    Duration? duration,
   }) {
     if (zoom != null && zoom < 0) {
       throw ArgumentError.value(
@@ -105,7 +106,7 @@ class AnimatedMapController extends MapControllerImpl {
     // This controller will be disposed when the animation is completed.
     final animationController = AnimationController(
       vsync: vsync,
-      duration: duration,
+      duration: duration ?? this.duration,
     );
     _animationController = animationController;
 
@@ -195,8 +196,7 @@ class AnimatedMapController extends MapControllerImpl {
     FitBoundsOptions? options,
     Curve? curve,
   }) {
-    final localOptions =
-        options ?? const FitBoundsOptions(padding: EdgeInsets.all(12));
+    final localOptions = options ?? const FitBoundsOptions(padding: EdgeInsets.all(12));
     final centerZoom = centerZoomFitBounds(bounds, options: localOptions);
 
     return animateTo(
