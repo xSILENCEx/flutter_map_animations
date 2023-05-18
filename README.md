@@ -1,6 +1,6 @@
 # Flutter Map Animations
 
-[![Pub Version](https://img.shields.io/pub/v/flutter_map_animations)](https://pub.dev/packages/flutter_map_animations)
+[![Pub Version (including pre-releases)](https://img.shields.io/pub/v/flutter_map_animations?include_prereleases)](https://pub.dev/packages/flutter_map_animations)
 
 Animation utility for the [flutter_map](https://pub.dev/packages/flutter_map) package.
 
@@ -77,4 +77,14 @@ FlutterMap(
 # Contributors
 
 <!-- readme: contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/TesteurManiak">
+            <img src="https://avatars.githubusercontent.com/u/14369698?v=4" width="100;" alt="TesteurManiak"/>
+            <br />
+            <sub><b>Guillaume Roux</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: contributors -end -->
