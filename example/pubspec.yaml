@@ -32,7 +32,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_map: ^4.0.0
+  flutter_map:                         #地图
+    git:
+      url: https://github.com/xSILENCEx/flutter_map
+      ref: master
   flutter_map_animations:
     path: ../
   latlong2: ^0.8.1

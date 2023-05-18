@@ -19,7 +19,7 @@ class AnimatedMarker {
     this.rotateAlignment,
     this.duration = const Duration(milliseconds: 300),
     this.curve = Curves.ease,
-    AnchorPos<dynamic>? anchorPos,
+    AnchorPos? anchorPos,
   }) : anchor = Anchor.forPos(anchorPos, width, height);
 
   /// Coordinates of the marker
