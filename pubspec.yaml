@@ -1,9 +1,10 @@
 name: flutter_map_animations
 description: Animation utilities for markers and controls of the flutter_map package.
 version: 0.3.0
-homepage: https://github.com/TesteurManiak/flutter_map_animations
-repository: https://github.com/TesteurManiak/flutter_map_animations
-issue_tracker: https://github.com/TesteurManiak/flutter_map_animations/issues
+homepage: https://github.com/xSILENCEx/flutter_map_animations
+repository: https://github.com/xSILENCEx/flutter_map_animations
+issue_tracker: https://github.com/xSILENCEx/flutter_map_animations/issues
+publish_to: none
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -11,7 +12,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_map: ^4.0.0
+  flutter_map:                         #地图
+    git:
+      url: https://github.com/xSILENCEx/flutter_map
+      ref: master
   latlong2: ^0.8.1
 
 dev_dependencies:
