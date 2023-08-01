@@ -6,13 +6,25 @@ Animation utility for the [flutter_map](https://pub.dev/packages/flutter_map) pa
 
 You can try the example app [here](https://testeurmaniak.github.io/flutter_map_animations/#/).
 
+# Table of Contents
+
+- [Documentation](#documentation)
+    - [AnimatedMapController](#animatedmapcontroller)
+        - [Animated Movement](#animated-movement)
+    - [AnimatedMarkerLayer & AnimatedMarker](#animatedmarkerlayer--animatedmarker)
+- [Migration Guide](#migration-guide)
+    - [v0.4.0](#v040)
+- [Contributors](#contributors)
+
+# Documentation
+
 ## AnimatedMapController
 
 Just create an `AnimatedMapController` and you're good to go:
 
 ```dart
 class _MyWidgetState extends State<MyWidget> with TickerProviderStateMixin {
-    late final _mapController = AnimatedMapController(vsync: this);
+    late final _animatedMapController = AnimatedMapController(vsync: this);
 
     // ...
 }
@@ -32,7 +44,7 @@ And add it to your `FlutterMap` widget:
 
 ```dart
 FlutterMap(
-    mapController: _mapController,
+    mapController: _animatedMapController.mapController,
     // ...
 )
 ```
@@ -56,7 +68,7 @@ All those methods are accessible from the `AnimatedMapController`:
 
 ```dart
 FlutterMap(
-    mapController: _mapController,
+    mapController: _animatedMapController.mapController,
     children: [
         TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -74,6 +86,24 @@ FlutterMap(
 )
 ```
 
+# Migration Guide
+
+## v0.4.0
+
+* With flutter_map v5 it's not possible anymore to extend `MapControllerImpl` which was used to use the `AnimatedMapController` directly as a `MapController` in the `FlutterMap` widget. Now an instance of `MapController` is created internally or can be passed as a parameter to the `AnimatedMapController` constructor. You can access it with the `mapController` getter:
+
+```dart
+late final _animatedMapController = AnimatedMapController(vsync: this);
+
+@override
+Widget build(BuildContext context) {
+    return FlutterMap(
+        mapController: _animatedMapController.mapController,
+        // ...
+    );
+}
+```
+
 # Contributors
 
 <!-- readme: contributors -start -->
@@ -84,6 +114,13 @@ FlutterMap(
             <img src="https://avatars.githubusercontent.com/u/14369698?v=4" width="100;" alt="TesteurManiak"/>
             <br />
             <sub><b>Guillaume Roux</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/rorystephenson">
+            <img src="https://avatars.githubusercontent.com/u/3683599?v=4" width="100;" alt="rorystephenson"/>
+            <br />
+            <sub><b>Rory Stephenson</b></sub>
         </a>
     </td></tr>
 </table>

@@ -1,3 +1,16 @@
+## 0.4.1
+
+* Fixed topics in `pubspec.yaml`
+
+## 0.4.0
+
+**Check the [Migration Guide](https://github.com/TesteurManiak/flutter_map_animations#v040) to learn about breaking changes in this version**
+
+* Updated to [flutter_map](https://pub.dev/packages/flutter_map/versions/5.0.0) v5
+* Updated Dart SDK constraints to `>=3.0.0 <4.0.0`
+* Contributions from [Rory Stephenson](https://github.com/rorystephenson)
+    * Add customId for for animated movements and don't trigger movement when it isn't necessary [#5](https://github.com/TesteurManiak/flutter_map_animations/pull/5)
+
 ## 0.3.0
 
 * Updated to [flutter_map](https://pub.dev/packages/flutter_map/versions/4.0.0) v4
